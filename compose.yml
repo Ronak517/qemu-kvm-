@@ -3,7 +3,16 @@ services:
     image: qemux/qemu
     container_name: qemu
     environment:
-      BOOT: "ubuntu"
+      BOOT: "https://archive.org/download/Win10ProLitev1803ITAx64/Isox64.iso"
+      LANGUAGE: English
+      REGION: en-GB
+      KEYBOARD: en-GB
+      DISK_SIZE: 62GB
+      RAM_SIZE: 4G
+      CPU_CORES: "4"
+      USERNAME: Docker
+      PASSWORD: Gates
+      BOOT_MODE: "legacy"
     devices:
       - /dev/kvm
       - /dev/net/tun
